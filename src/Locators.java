@@ -20,15 +20,17 @@ public class Locators {
 		driver.findElement(By.linkText("Forgot your password?")).click();
 		driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("Komal");
 		driver.findElement(By.xpath("//input[@placeholder='Email']")).sendKeys("Komal@gmail.com");
-		driver.findElement(By.xpath("//input[@placeholder='Phone Number']")).sendKeys("8082036034");
-		
+		driver.findElement(By.xpath("//input[@placeholder='Email']")).clear();
+		driver.findElement(By.cssSelector("input[type='text']:nth-child(3)")).sendKeys("Komadsdfsdl@gmail.com");
+		driver.findElement(By.xpath("//form/input[3]")).sendKeys("8082036034");
 		driver.findElement(By.cssSelector("button.reset-pwd-btn")).click();
+		System.out.println(driver.findElement(By.xpath("//form/p")));
 
 
 		
 		
 		//driver.findElements(By.className("error"));
-		driver.close();
+		//driver.close();
 
 	}
 
