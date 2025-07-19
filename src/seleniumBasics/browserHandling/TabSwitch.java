@@ -1,27 +1,28 @@
 package seleniumBasics.browserHandling;
 
+import java.util.Iterator;
+
 public class TabSwitch {
 
 
 	// Input - Komal Bhushan More 
 	// Output - More Bhushan Komal
+	public static void main(String[] args) 
+	{
+		String revString = reverseString("Komal Bhushan More");
+		System.out.println(revString);
+	}
 	
-	String name ="Komal Bhushan More";
-	String name2 = "";
-	
-	public static void main(String[] args) {
-		
-		String name ="Komal Bhushan More";
-		String name2 = "";
-		
-		String[] newname=  name.split(" ");
-		
-		for (int i=newname.length-1 ; i>=0;i--) {
-			System.out.print(newname[i]+" ");
-			
+	public static String reverseString(String name)
+	{
+		String revName ="";
+		String[] str =name.split(" ");
+		for(int i =str.length-1;i>=0;i--)
+		{
+			System.out.print(str[i]+" ");
 		}
 		
 		
-		
+		return revName;
 	}
 }
